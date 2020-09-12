@@ -5,7 +5,7 @@ exports.run = async (client, message) => {
         conn.write("setStick LEFT -0x8000 0x0 \r\n");
 
         // sets a timeout to revert cstick
-        setTimeout(async () => { await conn.write("setStick LEFT 0x0 0x0 \r\n")}, 250);
+        setTimeout(async () => { conn.write("setStick LEFT 0x0 0x0 \r\n")}, 250);
 
         console.log(`Input: LEFT by ${message.author.tag}`);
         return message.react('✔️');
