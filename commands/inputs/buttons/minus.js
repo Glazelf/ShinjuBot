@@ -1,6 +1,6 @@
 exports.run = (client, message) => {
     try {
-        const conn = require("../../switch/index");
+        const conn = require("../../../switch/index");
 
         conn.write("click MINUS \r\n");
 
@@ -9,7 +9,7 @@ exports.run = (client, message) => {
 
     } catch (e) {
         // log error
-        const logger = require('../../util/logger');
+        const logger = require('../../../util/logger');
 
         logger(e, client, message);
     };

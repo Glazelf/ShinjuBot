@@ -2,7 +2,6 @@
 /.idea
 /.vs
 config.json
-README.md
 *.log
 npm-debug.log*
 pids
