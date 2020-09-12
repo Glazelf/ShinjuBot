@@ -1,10 +1,10 @@
 exports.run = (client, message) => {
     try {
-        const conn = require("../../switch/index");
+        const conn = require("../../../switch/index");
 
-        conn.write("click DDOWN \r\n");
+        conn.write("click DLEFT \r\n");
 
-        console.log(`Input: DDOWN by ${message.author.tag}`);
+        console.log(`Input: DLEFT by ${message.author.tag}`);
         return message.react('✔️');
 
     } catch (e) {
