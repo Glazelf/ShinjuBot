@@ -2,9 +2,12 @@ exports.run = (client, message) => {
     try {
         const conn = require("../../../switch/index");
 
-        conn.write("click DDOWN \r\n");
+        conn.write("setStick LEFT 0x0 -0x8000");
 
-        console.log(`Input: DDOWN by ${message.author.tag}`);
+        // sets a timeout to revert cstick
+        setTimeout(async () => { await conn.write("setStick LEFT 0x0 0x0")}, 250);
+
+        console.log(`Input: DOWN by ${message.author.tag}`);
         return message.react('✔️');
 
     } catch (e) {
