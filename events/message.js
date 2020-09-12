@@ -8,9 +8,6 @@ module.exports = async (client, message) => {
     // Ignore all bots
     if (message.author.bot) return;
 
-    // Add message count
-    globalVars.totalMessages += 1;
-
     // Ignore commands in DMs
     if (message.channel.type == "dm") return;
 
@@ -39,7 +36,6 @@ module.exports = async (client, message) => {
 
     // +1 command count and drop message count
     globalVars.totalCommands += 1;
-    globalVars.totalMessages -= 1;
 
     // Run the command
     cmd.run(client, message, args);

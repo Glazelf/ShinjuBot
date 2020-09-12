@@ -23,5 +23,3 @@ module.exports.embedColor = "#C02EFF";
 module.exports.lackPerms = `you do not have the required permissions to do this.`;
 module.exports.prefix = "!";
 module.exports.totalCommands = 0;
-module.exports.totalLogs = 0;
-module.exports.totalMessages = 0;
