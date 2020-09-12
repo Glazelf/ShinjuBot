@@ -1,6 +1,5 @@
 exports.run = (client, message) => {
     try {
-
         const conn = require("../../switch/index");
 
         conn.write("click B \r\n");
