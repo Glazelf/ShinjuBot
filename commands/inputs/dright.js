@@ -3,10 +3,10 @@ exports.run = (client, message) => {
 
         const conn = require("../../switch/index");
 
-        conn.write("click A \r\n");
+        conn.write("click DRIGHT \r\n");
 
-        console.log(`Input: A by ${message.author.tag}`);
-        return message.channel.send(`> A pressed, ${message.author}.`);
+        console.log(`Input: DRIGHT by ${message.author.tag}`);
+        return message.channel.send(`> D-Pad RIGHT pressed, ${message.author}.`);
 
     } catch (e) {
         // log error
