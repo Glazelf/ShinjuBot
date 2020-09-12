@@ -5,7 +5,7 @@ exports.run = (client, message) => {
         conn.write("click DUP \r\n");
 
         console.log(`Input: DUP by ${message.author.tag}`);
-        return message.channel.send(`> D-Pad UP pressed, ${message.author}.`);
+        return message.react('✔️');
 
     } catch (e) {
         // log error

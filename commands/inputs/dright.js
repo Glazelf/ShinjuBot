@@ -5,7 +5,7 @@ exports.run = (client, message) => {
         conn.write("click DRIGHT \r\n");
 
         console.log(`Input: DRIGHT by ${message.author.tag}`);
-        return message.channel.send(`> D-Pad RIGHT pressed, ${message.author}.`);
+        return message.react('✔️');
 
     } catch (e) {
         // log error

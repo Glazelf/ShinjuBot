@@ -5,7 +5,7 @@ exports.run = (client, message) => {
         conn.write("click PLUS \r\n");
 
         console.log(`Input: PLUS by ${message.author.tag}`);
-        return message.channel.send(`> Plus pressed, ${message.author}.`);
+        return message.react('✔️');
 
     } catch (e) {
         // log error
