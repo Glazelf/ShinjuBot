@@ -11,10 +11,6 @@ module.exports = async (client, message) => {
     // Ignore commands in DMs
     if (message.channel.type == "dm") return;
 
-    // Automod
-    let memberRoles = message.member.roles.cache.filter(element => element.name !== "@everyone");
-    if (memberRoles.size == 0) autoMod(message);
-
     // Ignore messages not starting with the prefix
     if (message.content.indexOf(globalVars.prefix) !== 0) return;
 
