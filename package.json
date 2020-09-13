@@ -1,0 +1,27 @@
+{
+  "name": "shinjubot",
+  "version": "1.0.0",
+  "description": "Inspired by [x79](https://github.com/x79-sys/discord-plays-swsh).  \r This bot is a (simple) Javascript bot that allows commands from users to do inputs on the Switch, most commonly used for community Pokémon playthroughs.",
+  "main": "bot.js",
+  "dependencies": {
+    "discord.js": "^12.3.1",
+    "discord.js-commando": "^0.10.0",
+    "enmap": "^5.7.1",
+    "fs": "^0.0.1-security",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Glazelf/ShinjuBot.git"
+  },
+  "author": "Glaze",
+  "license": "",
+  "bugs": {
+    "url": "https://github.com/Glazelf/ShinjuBot/issues"
+  },
+  "homepage": "https://github.com/Glazelf/ShinjuBot#readme"
+}
