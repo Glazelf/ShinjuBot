@@ -1,8 +1,10 @@
-exports.run = (client, message) => {
+import logger from "../../../util/logger.js";
+import conn from "../../../switch/index.js";
+import globalVars from "../../objects/globalVars.json" with { type: "json" };
+
+export default (client, message) => {
     try {
         if (message.author.id !== client.config.ownerID) return message.reply(globalVars.lackPerms);
-
-        const conn = require("../../switch/index");
 
         conn.write("detachController \r\n");
 
@@ -10,9 +12,6 @@ exports.run = (client, message) => {
         return message.channel.send(`> Successfully detached, ${message.author}.`);
 
     } catch (e) {
-        // log error
-        const logger = require('../../util/logger');
-
         logger(e, client, message);
     };
 };

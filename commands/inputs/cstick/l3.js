@@ -1,16 +1,14 @@
-exports.run = (client, message) => {
-    try {
-        const conn = require("../../../switch/index");
+import logger from "../../../util/logger.js";
+import conn from "../../../switch/index.js";
 
+export default (client, message) => {
+    try {
         conn.write("click L3 \r\n");
 
         console.log(`Input: L3 by ${message.author.tag}`);
         return message.react('✔️');
 
     } catch (e) {
-        // log error
-        const logger = require('../../../util/logger');
-
         logger(e, client, message);
     };
 };

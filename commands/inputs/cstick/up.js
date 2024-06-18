@@ -1,19 +1,16 @@
-exports.run = async (client, message) => {
+import logger from "../../../util/logger.js";
+import conn from "../../../switch/index.js";
+
+export default async (client, message) => {
     try {
-        const conn = require("../../../switch/index");
-
         conn.write("setStick LEFT 0x0 0x7FFF \r\n");
-
         // sets a timeout to revert cstick
-        setTimeout(async () => { conn.write("setStick LEFT 0x0 0x0 \r\n")}, 250);
+        setTimeout(async () => { conn.write("setStick LEFT 0x0 0x0 \r\n") }, 250);
 
         console.log(`Input: UP by ${message.author.tag}`);
         return message.react('✔️');
 
     } catch (e) {
-        // log error
-        const logger = require('../../../util/logger');
-
         logger(e, client, message);
     };
 };

@@ -1,4 +1,4 @@
-module.exports = (exception, client, message = null) => {
+export default (exception, client, message = null) => {
     // Import globals
     let globalVars = require('../events/ready');
 

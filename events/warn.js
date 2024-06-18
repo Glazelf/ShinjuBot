@@ -1,4 +1,4 @@
-module.exports = (client, info) => {
+export default (client, info) => {
     // log info
-    onsole.log(info);
+    console.log(info);
 };

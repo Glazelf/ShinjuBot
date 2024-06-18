@@ -1,11 +1,10 @@
-exports.run = (client, message) => {
+import logger from "../../../util/logger.js";
+
+export default (client, message) => {
     try {
         return message.channel.send(`> My friendcode is ${client.config.friendcode}, ${message.author}.`);
 
     } catch (e) {
-        // log error
-        const logger = require('../../util/logger');
-
         logger(e, client, message);
     };
 };

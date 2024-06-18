@@ -1,10 +1,10 @@
-module.exports.run = async (client, message) => {
-    // Import globals
-    let globalVars = require('../../events/ready');
+import Discord from "discord.js";
+import logger from "../../util/logger.js";
+import globalVars from "../../objects/globalVars.json" with { type: "json" };
+
+export default async (client, message) => {
     try {
         if (!message.channel.permissionsFor(message.guild.me).has("EMBED_LINKS")) return message.channel.send(`> I can't run this command because I don't have permissions to send embedded messages, ${message.author}.`);
-
-        const Discord = require("discord.js");
 
         const helpEmbed = new Discord.MessageEmbed()
             .setColor(globalVars.embedColor)
@@ -17,9 +17,6 @@ module.exports.run = async (client, message) => {
         return message.channel.send(helpEmbed);
 
     } catch (e) {
-        // log error
-        const logger = require('../../util/logger');
-
         logger(e, client, message);
     };
 };

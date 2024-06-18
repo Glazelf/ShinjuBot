@@ -1,4 +1,4 @@
-module.exports = async (client) => {
+export default async (client) => {
   try {
     console.log(`Loaded a total of ${client.commands.size} commands!`);
     console.log(`Ready to serve in ${client.channels.cache.size} channels on ${client.guilds.cache.size} servers, for a total of ${client.users.cache.size} users.`);
@@ -18,8 +18,3 @@ module.exports = async (client) => {
     console.log(e);
   };
 };
-
-module.exports.embedColor = "#C02EFF";
-module.exports.lackPerms = `you do not have the required permissions to do this.`;
-module.exports.prefix = "!";
-module.exports.totalCommands = 0;

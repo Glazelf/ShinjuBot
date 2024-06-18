@@ -1,11 +1,11 @@
 import logger from "../../../util/logger.js";
 import conn from "../../../switch/index.js";
 
-export default (client, message) => {
+export default (client, message, button) => {
     try {
-        conn.write("click R3 \r\n");
+        conn.write(`click ${button.toUpperCase()} \r\n`);
 
-        console.log(`Input: R3 by ${message.author.tag}`);
+        console.log(`Input: ${button.toUpperCase()} by ${message.author.tag}`);
         return message.react('✔️');
 
     } catch (e) {
