@@ -18,7 +18,7 @@ export default async (client, message) => {
     // Standard definition
     const args = message.content.slice(globalVars.prefix.length).trim().split(/ +/g);
     const command = args.shift().toLowerCase();
-    // Grab the command data from the client.commands Enmap
+    // Grab the command data from client.commands
     const cmd = client.commands.get(command);
     // If that command doesn't exist, exit
     if (!cmd) return;

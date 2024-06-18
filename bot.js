@@ -1,5 +1,4 @@
 import Discord from "discord.js";
-import Enmap from "enmap";
 import fs from "fs";
 import path from "path";
 import config from "./config.json" with { type: "json" };
@@ -24,7 +23,7 @@ fs.readdir("./events/", (err, files) => {
   });
 });
 
-client.commands = new Enmap();
+client.commands = new Discord.Collection();
 
 walk(`./commands/`);
 
