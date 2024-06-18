@@ -1,5 +1,5 @@
 import pressStick from "../../../util/pressStick.js";
 
 export default (client, message) => {
-    return pressStick(client, message, "RIGHT", "0x0 -0x8000");
+    return pressStick(client, message, "LEFT", "0x7FFF 0x0");
 };

@@ -1,5 +1,5 @@
-import clickButton from "../../../util/clickButton.js";
+import pressButton from "../../../util/clickButton.js";
 
 export default (client, message) => {
-    return clickButton(client, message, "DUP");
+    return pressButton(client, message, "DUP");
 };
