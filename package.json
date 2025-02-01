@@ -5,7 +5,7 @@
   "main": "bot.js",
   "type": "module",
   "dependencies": {
-    "discord.js": "^14.16.3",
+    "discord.js": "^14.17.3",
     "path": "^0.12.7"
   },
   "scripts": {
